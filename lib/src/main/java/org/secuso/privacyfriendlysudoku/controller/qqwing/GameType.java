@@ -55,4 +55,13 @@ public enum GameType {
     public int getSectionWidth() {
         return sectionWidth;
     }
+
+    public static GameType of(int boardSize) {
+        return switch (boardSize) {
+            case 6 * 6 -> Default_6x6;
+            case 9 * 9 -> Default_9x9;
+            case 12 * 12 -> Default_12x12;
+            default -> throw new IllegalArgumentException("Unsupported board size: " + boardSize);
+        };
+    }
 }
