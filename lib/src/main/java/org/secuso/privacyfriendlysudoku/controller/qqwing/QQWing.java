@@ -22,16 +22,11 @@
 // @formatter:on
 package org.secuso.privacyfriendlysudoku.controller.qqwing;
 
-import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
-
-import org.secuso.privacyfriendlysudoku.game.GameDifficulty;
-import org.secuso.privacyfriendlysudoku.game.GameType;
 
 /**
  * The board containing all the memory structures and methods for solving or
@@ -253,7 +248,6 @@ public class QQWing {
 					return GameDifficulty.Moderate;
 				break;
 			case Default_12x12:
-				Log.d("GeneratorService", "# HiddenSingleCount: "+ getHiddenSingleCount());
 				if (getHiddenSingleCount() > 20)
 					return GameDifficulty.Moderate;
 				break;
